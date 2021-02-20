@@ -1,5 +1,8 @@
 # my-first-miniprogram
 > 我的第一个小程序
+
+[TOC]
+
 ## 初识小程序
 ### 近几年主要的变化
 * 自定义组建
@@ -90,7 +93,7 @@
 
 ``rpx``是小程序中自适应机型的长度单位
 
-image组建如果不设置长宽样式，默认带有[长宽设置](https://developers.weixin.qq.com/miniprogram/dev/component/image.html)
+image组件如果不设置长宽样式，默认带有[长宽设置](https://developers.weixin.qq.com/miniprogram/dev/component/image.html)
 
 ### 使用flex布局进行垂直分布布局
 
