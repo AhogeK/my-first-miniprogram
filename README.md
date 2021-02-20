@@ -107,3 +107,7 @@ felx具备两根轴线，分别为主轴与交叉轴。
 *更多关于[flex](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)可以访问MDN查看相关文档*
 
 在开发中使用flex通常会使用一个总容器，而小程序中常用的便是``#view></view>``
+
+### 小程序 app.json 的一些配置
+
+key ``"window"`` value 为一个对象，当中有 ``"navigationBarBackgroundColor"``用于设置顶部导航条的背景色，该背景色不能直接在``.wxss``中设置
