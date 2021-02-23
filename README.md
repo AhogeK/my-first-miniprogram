@@ -111,3 +111,30 @@ felx具备两根轴线，分别为主轴与交叉轴。
 ### 小程序 app.json 的一些配置
 
 key ``"window"`` value 为一个对象，当中有 ``"navigationBarBackgroundColor"``用于设置顶部导航条的背景色，该背景色不能直接在``.wxss``中设置
+
+## 组件
+### LinUI组件库
+> [Lin UI 是基于 微信小程序原生语法 实现的组件库。遵循简洁，易用的设计规范。](https://doc.mini.talelin.com/)
+
+#### 安装编译LinUI
+
+1. 初始化
+      * ``npm init``
+2. 安装LinUI
+      * ``npm install lin-ui``
+3. 小程序NPM编译
+      * ![blog-img-202102231104](https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/2021-02-23_11-04.png)
+
+### 如何使用组件
+  1. 进入要使用组件的页面文件夹
+  2. 在*usingComponents* 中添加自定义组件，例如：
+      * ```json
+        {
+          "usingComponents": {
+            "l-avatar": "/miniprogram_npm/lin-ui/avatar/index"
+          }
+        }
+        ```
+        左边的``l-avatar``是自定义的组件名,右边的 value 是组件的路径
+
+之后就可以在``.wxml``中使用``l-avatar``组件

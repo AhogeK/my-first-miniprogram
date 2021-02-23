@@ -1,8 +1,13 @@
 <!--pages/welcome/welcome.wxml-->
 <!-- 用于布局,通常称为容器 -->
 <view class="container">
-  <image class="avatar" src="/images/avatar/1.png"></image>
-  <text class="motto">Hello World</text>
+  <l-avatar 
+    class="l-avatar"
+    placement="bottom" 
+    open-data="{{['userAvatarUrl']}}"
+    size="180"
+  />
+  <text class="motto">Hello {{userInfo.nickName}}</text>
   <view class="journey-container">
     <text class="journey">开启小程序之旅</text>
   </view>

@@ -1,0 +1,22 @@
+{
+  "name": "my-first-miniprogram",
+  "version": "1.0.0",
+  "description": "我的第一个小程序",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhogeK/my-first-miniprogram.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AhogeK/my-first-miniprogram/issues"
+  },
+  "homepage": "https://github.com/AhogeK/my-first-miniprogram#readme",
+  "dependencies": {
+    "lin-ui": "^0.9.4"
+  }
+}
