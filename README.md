@@ -44,6 +44,12 @@
 
 资源管理器可以关闭，通过搜索功能查找所需要的文件
 
+### 开发工具添加新的编译模式
+> 当我们要开发新的页面时，需要小程序显示要开发的页面就可以通过新增编译模式进行
+
+![新建的位置](https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/2021-02-23_14-28.png)
+![新建](https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/2021-02-23_14-29.png)
+
 ### 小程序的基本单位-Page页面
 
 小程序所有的页面都放在*pages*的文件夹中，但不是说必须
