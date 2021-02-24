@@ -5,24 +5,14 @@ Page({
    * Page initial data
    */
   data: {
-
+    userInfo: null
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    var that = this
-    _getUserInfo();
-    function _getUserInfo() {
-      wx.getUserInfo({
-        success: function (res) {
-          that.setData({
-            userInfo: res.userInfo
-          })
-        }
-      })
-    }
+  
   },
 
   /**

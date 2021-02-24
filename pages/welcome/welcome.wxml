@@ -4,10 +4,10 @@
   <l-avatar 
     class="l-avatar"
     placement="bottom" 
-    open-data="{{['userAvatarUrl']}}"
+    open-data="{{['userAvatarUrl', 'userNickName']}}"
     size="180"
   />
-  <text class="motto">Hello {{userInfo.nickName}}</text>
+  <!-- <text class="motto">Hello {{ userInfo.nickName }}</text> -->
   <view class="journey-container">
     <text class="journey">开启小程序之旅</text>
   </view>

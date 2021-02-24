@@ -1,2 +1,15 @@
-<!--pages/posts/posts.wxml-->
-<text>pages/posts/posts.wxml</text>
+<!-- pages/posts/posts.wxml -->
+<view>
+  <swiper>
+    <swiper-item>
+      <!-- 插槽 -->
+      <image src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/bestplayers.png" />
+    </swiper-item>
+    <swiper-item>
+      <image src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/lpl.png" />
+    </swiper-item>
+    <swiper-item>
+      <image src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/jumpfly.png" />
+    </swiper-item>
+  </swiper>
+</view>
