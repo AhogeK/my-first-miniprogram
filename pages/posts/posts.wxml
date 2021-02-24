@@ -1,6 +1,6 @@
 <!-- pages/posts/posts.wxml -->
 <view>
-  <swiper>
+  <swiper indicator-dots autoplay>
     <swiper-item>
       <!-- 插槽 -->
       <image src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/bestplayers.png" />
