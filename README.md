@@ -119,6 +119,31 @@ felx具备两根轴线，分别为主轴与交叉轴。
 key ``"window"`` value 为一个对象，当中有 ``"navigationBarBackgroundColor"``用于设置顶部导航条的背景色，该背景色不能直接在``.wxss``中设置
 
 ## 组件
+
+### 小程序自带组件库
+
+#### swiper与swiper-item组件
+> [分别是小程序自带的滑块视图容器组件与滑块容器元素组件](https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html)
+
+```html
+<swiper indicator-dots autoplay circular interval="3000">
+  <swiper-item>
+    <!-- 插槽 -->
+    <image src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/bestplayers.png" />
+  </swiper-item>
+  <swiper-item>
+    <image src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/lpl.png" />
+  </swiper-item>
+  <swiper-item>
+    <image src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/jumpfly.png" />
+  </swiper-item>
+</swiper>
+```
+
+*在``swiper``组件中，``indicator-dots``属性表是否显示指示点，``autoplay``表示是否自动轮播滑动，``circular`` 表示是否形成一个环反复循环，``interval`` 则表示自动轮播滑动的间隔时长，``3000`` 即表示3秒。属性没有value说明其值为``true``，如果自己赋值需要 ``autoplay="{{true}}"``的格式，不加 ``{{}}``不作为true仅作为true这个字符串*
+
+*如果要给这个滑块设置一个宽高，需要在``swiper``以及``swiper-item``**标签里面**的元素一起配合设置*
+
 ### LinUI组件库
 > [Lin UI 是基于 微信小程序原生语法 实现的组件库。遵循简洁，易用的设计规范。](https://doc.mini.talelin.com/)
 
