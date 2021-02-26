@@ -169,3 +169,7 @@ key ``"window"`` value 为一个对象，当中有 ``"navigationBarBackgroundCol
         左边的``l-avatar``是自定义的组件名,右边的 value 是组件的路径
 
 之后就可以在``.wxml``中使用``l-avatar``组件
+
+## 生疏CSS简单了解
+### letter-spacing
+> 用来增加或者减少字符间的空白间距

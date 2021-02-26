@@ -12,21 +12,23 @@
       <image src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/jumpfly.png" />
     </swiper-item>
   </swiper>
-  <view>
-    <view>
-      <image src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-avatar-3.png" />
-      <text>Nov 18 2020</text>
+  <view class="post-container">
+    <view class="post-author-date">
+      <image class="post-author" src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-avatar-3.png" />
+      <text class="post-date">Nov 18 2020</text>
     </view>
-    <text>2020LPL夏季赛季后赛观赛指南</text>
-    <image src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/lpl.png" />
-    <text>
+    <text class="post-title">2020LPL夏季赛季后赛观赛指南</text>
+    <image class="post-image" src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/lpl.png" />
+    <text class="post-content">
       8月9号，LPL常规赛收官之战结束，在事关季后赛轮次的比赛中关键对局中，SN战胜了FPX，为本赛季常规赛画上句号。进入季后赛的战队依次为，TES、JDG、IG、SN、V5、LGD、WE、FPX
     </text>
-    <view>
-      <image src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-icon-chat.png" />
-      <text>92</text>
-      <image src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-icon-view.png" />
-      <text>102</text>
+    <view class="post-like">
+      <!-- <image class="post-like-image" src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-icon-chat.png" /> -->
+      <l-icon class="post-like-image" color="#666" size="28" name="favor" />
+      <text class="post-like-font">92</text>
+      <!-- <image class="post-like-image" src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-icon-view.png" /> -->
+      <l-icon class="post-like-image" color="#666" size="32" name="eye" />
+      <text class="post-like-font">102</text>
     </view>
   </view>
 </view>
