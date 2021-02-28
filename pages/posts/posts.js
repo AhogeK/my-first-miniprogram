@@ -1,4 +1,14 @@
 // pages/posts/posts.js
+
+// var postData = require('../../data/data.js')
+// console.log(postData)
+
+import {
+  postList
+} from '../../data/data'
+
+console.log(postList)
+
 Page({
 
   /**
@@ -12,7 +22,9 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    this.setData({
+      postList
+    })
   },
 
   /**
