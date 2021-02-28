@@ -8,11 +8,21 @@ Page({
     userInfo: null
   },
 
+  oneTap: function () {
+    console.log("one tap")
+    // wx.navigateTo({
+    //   url: '/pages/posts/posts'
+    // })
+    wx.redirectTo({
+      url: '/pages/posts/posts'
+    })
+  },
+
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-  
+
   },
 
   /**
