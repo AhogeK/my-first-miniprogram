@@ -1,17 +1,20 @@
 <view class="container">
-  <image src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-bestplayers.png" />
-  <view>
-    <image src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-avatar-2.png" />
-    <text>7七月</text>
-    <text>发表于</text>
-    <text>16小时前</text>
+  <image class="head-image" src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-bestplayers.png" />
+  <view class="author-date">
+    <image class="avatar" src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-avatar-2.png" />
+    <text class="author">7七月</text>
+    <text class="const-text">发表于</text>
+    <text class="date">16小时前</text>
   </view>
-  <text>LPL夏季赛最佳阵容</text>
-  <view>
-    <image src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-icon-share.png" />
-    <image src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-icon-collection.png" />
+  <text class="title">2020LPL夏季赛最佳阵容</text>
+  <view class="tool">
+    <view class="circle">
+      <image src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-icon-collection.png" />
+      <image class="share-img" src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-icon-share.png" />
+    </view>
+    <view class="horizon"></view>
   </view>
-  <text>
+  <text class="detail">
     8月9号，LPL常规赛收官之战结束，在事关季后赛轮次的比赛中关键对局中，SN战胜了FPX，为本赛季常规赛画上句号。进入季后赛的战队依次为，TES、JDG、IG、SN、V5、LGD、WE、FPX。既有传统四强，又有新崛起的黑马。本文主要是从上路的大改动展开，引发对所有其他的影响。牵一发而动全身，上路一旦回归carry上单版本，对野区和中路的影响是显而易见的。而下路在艾希大砍一刀之后，女警的过于强势，使她只能出现在BAN位上，因此主流下路还是会回归功能性下路英雄。由此，可以对应各位选手的英雄池，对应各支战队的战术储备，漫长的季后赛，考验的就是各队适应版本的能力。
   </text>
 </view>
