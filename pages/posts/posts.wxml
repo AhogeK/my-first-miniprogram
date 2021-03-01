@@ -7,10 +7,10 @@
     </swiper-item>
   </swiper>
   <block wx:for="{{ postList }}" wx:key="*this">
-    <view class="post-container">
+    <view bind:tap="onJumpToDetail" class="post-container">
       <view class="post-author-date">
         <image class="post-author" src="{{ item.avatar }}" />
-        <text class="post-date">{{ item.date }}</text>
+        <text class="post-date">{{ tem.date }}</text>
       </view>
       <text class="post-title">{{ item.title }}</text>
       <image class="post-image" src="{{ item.imgSrc }}" />

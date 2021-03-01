@@ -1,12 +1,4 @@
-// pages/posts/posts.js
-
-// var postData = require('../../data/data.js')
-// console.log(postData)
-
-import {
-  postList
-} from '../../data/data'
-
+// pages/post-detail/post-detail.js
 Page({
 
   /**
@@ -16,21 +8,11 @@ Page({
 
   },
 
-  onJumpToDetail(event) {
-    console.log(event)
-    console.log('onJumptoDetail')
-    wx.navigateTo({
-      url: '/pages/post-detail/post-detail',
-    });
-  },
-
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    this.setData({
-      postList
-    })
+
   },
 
   /**
