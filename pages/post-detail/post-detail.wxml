@@ -1,2 +1,14 @@
-<!--pages/post-detail/post-detail.wxml-->
-<text>pages/post-detail/post-detail.wxml</text>
+<view class="container">
+  <image src="" />
+  <view>
+    <image src="" />
+    <text></text>
+    <text>发表于</text>
+  </view>
+  <text></text>
+  <view>
+    <image src="" />
+    <image src="" />
+  </view>
+  <text></text>
+</view>
