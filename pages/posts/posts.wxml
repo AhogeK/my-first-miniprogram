@@ -3,11 +3,11 @@
   <swiper indicator-dots autoplay circular interval="3000">
     <swiper-item wx:for="{{ postList }}" wx:key="postId">
       <!-- 插槽 -->
-      <image src="{{ item.headImgSrc }}" />
+      <image src="{{ item.headImgSrc }}" data-post-id="{{item.postId}}" bind:tap="onJumpToDetail"/>
     </swiper-item>
   </swiper>
   <block wx:for="{{ postList }}" wx:key="index">
-    <view bind:tap="onJumpToDetail" class="post-container">
+    <view data-post-id="{{item.postId}}" bind:tap="onJumpToDetail" class="post-container">
       <view class="post-author-date">
         <image class="post-author" src="{{ item.avatar }}" />
         <text class="post-date">{{ tem.date }}</text>

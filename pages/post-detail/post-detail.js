@@ -1,25 +1,34 @@
 // pages/post-detail/post-detail.js
+import { postList } from '../../data/data'
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
-
+    postData: {}
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    console.log(options)
+    for (const item of postList) {
+      if (item.postId == options.pid) {
+        console.log(item)
+        this.setData({
+          postData: item
+        })
+      }
+    }
   },
 
   /**
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
-
   },
 
   /**

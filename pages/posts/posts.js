@@ -3,9 +3,7 @@
 // var postData = require('../../data/data.js')
 // console.log(postData)
 
-import {
-  postList
-} from '../../data/data'
+import { postList } from '../../data/data'
 
 Page({
 
@@ -17,11 +15,10 @@ Page({
   },
 
   onJumpToDetail(event) {
-    console.log(event)
-    console.log('onJumptoDetail')
+    const postId = event.currentTarget.dataset.postId
     wx.navigateTo({
-      url: '/pages/post-detail/post-detail',
-    });
+      url: '/pages/post-detail/post-detail?pid=' + postId,
+    })
   },
 
   /**

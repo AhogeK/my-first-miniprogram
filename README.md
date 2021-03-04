@@ -190,6 +190,11 @@ key ``"window"`` value 为一个对象，当中有 ``"navigationBarBackgroundCol
 ### 绑定并阻止事件冒泡
 除 ``bind`` 外，也可以用 ``catch`` 来绑定事件。与 ``bind`` 不同， ``catch`` 会**阻止**事件向上**冒泡**。
 
+### 自定义属性 data
+自定义属性 ``data`` 也就是小程序的公共属性 ``data-*`` 用于组件上出发的事件时，会发送给事件处理函数
+
+*通过跳转函数可利用url来传递data数据，data数据在调用方法的参数event中，传递过去后可在onLoad的option参数中获取*
+
 ## API
 
 ### 跳转应用内的某个页面
