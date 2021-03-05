@@ -13,7 +13,7 @@
         <text class="post-date">{{ tem.date }}</text>
       </view>
       <text class="post-title">{{ item.title }}</text>
-      <image class="post-image" src="{{ item.imgSrc }}" />
+      <image mode="aspectFill" class="post-image" src="{{ item.imgSrc }}" />
       <text class="post-content">{{ item.content }}</text>
       <view class="post-like">
         <!-- <image class="post-like-image" src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-icon-chat.png" /> -->

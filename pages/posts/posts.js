@@ -24,10 +24,17 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
+  async onLoad(options) {
     this.setData({
       postList
     })
+    wx.setStorageSync('flag', true);
+    wx.getStorage({
+      key: 'flag'
+    }).then((val) => {
+      console.log(val)
+    })
+    console.log(await wx.getStorage({ key: 'flag'}))
   },
 
   /**

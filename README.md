@@ -118,6 +118,10 @@ felx具备两根轴线，分别为主轴与交叉轴。
 
 key ``"window"`` value 为一个对象，当中有 ``"navigationBarBackgroundColor"``用于设置顶部导航条的背景色，该背景色不能直接在``.wxss``中设置
 
+### 小程序的 app.js
+
+在小程序的``app.js``中可以使用``onLaunch``生命周期函数，它会在小程序启动时执行，它也配置配置全局变量，然后在其他页面使用``getApp()``获取app即可获取到设置的全局变量
+
 ## 组件
 
 ### 小程序自带组件库
@@ -206,3 +210,47 @@ key ``"window"`` value 为一个对象，当中有 ``"navigationBarBackgroundCol
 #### wx.redirectTo(Object object)
 关闭当前页面，跳转到应用内的某个页面。但是不允许跳转到 tabbar 页面。
 在小程序插件中使用时，只能在当前插件的页面中调用
+
+
+
+### 小程序缓存的增删改查清除
+
+**新增**
+
+``wx.setStorageSync('flag', true)``
+
+**修改**
+
+``wx.setStorageSync('flag', false)``
+
+**查看**
+
+``wx.getStorageSync('flag')``
+
+**删除**
+
+``wx.removeStorageSync('flag')``
+
+**清除**
+
+``wx.clearStorageSync()``
+
+**缓存异步获取**
+
+```js
+async onLoad(options) {
+    this.setData({
+      postList
+    })
+    wx.setStorageSync('flag', true);
+    // 第一种
+    wx.getStorage({
+      key: 'flag'
+    }).then((val) => {
+      console.log(val)
+    })
+    // ES7 第二种
+    console.log(await wx.getStorage({ key: 'flag'}))
+  }
+```
+
