@@ -20,31 +20,66 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
-    console.log(options)
+  onLoad(options) {
     this.data._pid = options.pid
-    this.data._postsCollected = wx.getStorageSync('posts_collected')
-    const collected = wx.getStorageSync('posts_collected')[this.data._pid]
-    this.setData({
-      collected
+    wx.getStorage({
+      key: 'posts_collected',
+    }).then((res) => {
+      this.data._postsCollected = res.data
+    }).catch(() => {
+      this.data._postsCollected = {}
     })
-    for (const item of postList) {
-      if (item.postId == options.pid) {
-        console.log(item)
-        this.setData({
-          postData: item
-        })
+    setTimeout(()=>{
+      const collected = this.data._postsCollected[this.data._pid]
+      this.setData({
+        collected
+      })
+      for (const item of postList) {
+        if (item.postId == options.pid) {
+          this.setData({
+            postData: item
+          })
+        }
       }
-    }
+    }, 50)
   },
 
   onCollect(event) {
-    const postsCollected = this.data._postsCollected;
-    postsCollected[this.data._pid] = !postsCollected[this.data._pid]
-    this.setData({
-      collected: postsCollected[this.data._pid]
+    wx.showModal({
+      title: this.data.collected ? '是否取消收藏' : '是否确认收藏',
+      content: '',
+      showCancel: true,
+      cancelText: '取消',
+      cancelColor: '#000000',
+      confirmText: '确定',
+      confirmColor: '#3CC51F',
+    }).then((res) => {
+      if(res.confirm){
+        let postsCollected = this.data._postsCollected
+        postsCollected[this.data._pid] = !postsCollected[this.data._pid]
+        wx.setStorage({
+          key: 'posts_collected',
+          data: postsCollected,
+        })
+        wx.showToast({
+          title: this.data.collected ? '取消收藏' : '收藏成功',
+          duration: 2000,
+        })
+        this.setData({
+          collected: postsCollected[this.data._pid]
+        })
+      }
     })
-    wx.setStorageSync('posts_collected', postsCollected)
+  },
+
+  share(event) {
+    wx.showActionSheet({
+      itemList: ['分享给微信好友', '分享到朋友圈', '分享到QQ', '分享到微博'],
+    }).then((res) => {
+      console.log(res.tapIndex)
+    }).catch((res) => {
+      console.log(res)
+    })
   },
 
   /**
@@ -57,7 +92,7 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+ 
   },
 
   /**

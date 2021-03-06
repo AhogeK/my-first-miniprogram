@@ -254,3 +254,67 @@ async onLoad(options) {
   }
 ```
 
+### 显示消息提示框
+
+#### wx.showToast(Object object)
+
+```js
+wx.showToast({
+  title: '成功',
+  icon: 'success',
+  duration: 2000
+})
+```
+
+* ``title`` 提示的内容
+* ``icon`` 显示的图标类型
+* ``duration`` 提示的延迟时间
+
+[showToast 官方文档](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html)
+
+### 显示模态对话框
+
+#### wx.showModal(Object object)
+
+```js
+wx.showModal({
+  title: '提示',
+  content: '这是一个模态弹窗',
+  success (res) {
+    if (res.confirm) {
+      console.log('用户点击确定')
+    } else if (res.cancel) {
+      console.log('用户点击取消')
+    }
+  }
+})
+```
+
+* ``title`` 提示的标题
+* ``content`` 提示的内容
+* ``sucess`` 接口调用成功的回调函数
+
+[showModal 官方文档](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showModal.html)
+
+
+
+### 显示操作菜单
+
+#### wx.showActionSheet(Object object)
+
+```js
+wx.showActionSheet({
+  itemList: ['A', 'B', 'C'],
+  success (res) {
+    console.log(res.tapIndex)
+  },
+  fail (res) {
+    console.log(res.errMsg)
+  }
+})
+```
+
+* ``itemList`` 按钮的文字数组，数组长度最大为6
+* ``success`` 接口调用成功的回调函数
+  * ``tapIndex`` 用户点击的按钮序号，从上到下的顺序从0开始
+* ``fail`` 接口调用失败的回调函数

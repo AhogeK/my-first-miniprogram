@@ -11,7 +11,7 @@
     <view class="circle">
       <image wx:if="{{ !collected }}" bind:tap="onCollect" src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-icon-collection-anti.png" />
       <image wx:else bind:tap="onCollect" src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-icon-collection.png" />
-      <image class="share-img" src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-icon-share.png" />
+      <image class="share-img" bind:tap="share" src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-icon-share.png" />
     </view>
     <view class="horizon"></view>
   </view>
