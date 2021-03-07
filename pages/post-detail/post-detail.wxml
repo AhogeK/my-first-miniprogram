@@ -1,5 +1,6 @@
 <view class="container">
   <image class="head-image" src="{{ postData.headImgSrc }}" />
+  <image bind:tap="onMusic" class="audio" src="{{!isPlaying ? 'https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-music-start.png' : 'https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-music-stop.png'}}" />
   <view class="author-date">
     <image class="avatar" src="{{ postData.avatar }}" />
     <text class="author">{{ postData.author }}</text>

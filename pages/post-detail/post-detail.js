@@ -13,6 +13,7 @@ Page({
   data: {
     postData: {},
     collected: false,
+    isPlaying: false,
     _pid: null,
     _postsCollected: {}
   },
@@ -42,6 +43,10 @@ Page({
         }
       }
     }, 50)
+    const backAudioManager = wx.getBackgroundAudioManager()
+    this.setData({
+      backAudioManager
+    })
   },
 
   onCollect(event) {
@@ -82,6 +87,28 @@ Page({
     })
   },
 
+  onMusic(event) {
+    if (!this.data.isPlaying) {
+      this.data.backAudioManager.title = this.data.postData.music.title
+      this.data.backAudioManager.src = this.data.postData.music.url
+      this.data.backAudioManager.coverImgUrl = this.data.postData.music.coverImg
+      this.data.backAudioManager.onPlay(() => {
+        console.log('on play')
+        this.setData({
+          isPlaying: true
+        })
+      })
+      this.data.backAudioManager.onPause(() => {
+        console.log('on pause')
+        this.setData({
+          isPlaying: false
+        })
+      })
+    } else {
+      this.data.backAudioManager.pause()
+    }
+  },
+
   /**
    * Lifecycle function--Called when page is initially rendered
    */
@@ -106,7 +133,8 @@ Page({
    * Lifecycle function--Called when page unload
    */
   onUnload: function () {
-
+    console.log("on unload")
+    this.data.backAudioManager.stop()
   },
 
   /**

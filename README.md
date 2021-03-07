@@ -318,3 +318,25 @@ wx.showActionSheet({
 * ``success`` 接口调用成功的回调函数
   * ``tapIndex`` 用户点击的按钮序号，从上到下的顺序从0开始
 * ``fail`` 接口调用失败的回调函数
+
+### 背景音乐播放
+
+#### BackgroundAudioManager
+
+> 通过 [wx.getBackgroundAudioManager](https://developers.weixin.qq.com/miniprogram/dev/api/media/background-audio/wx.getBackgroundAudioManager.html) 获取
+
+注意获取``BackgroundAudioManager``需要在``App.js``配置
+
+``"requiredBackgroundModes": ["audio"]``
+
+```js
+const backAudioManager = wx.getBackgroundAudioManager()
+backAudioManager.title = this.data.postData.music.title
+backAudioManager.src = this.data.postData.music.url
+backAudioManager.coverImgUrl = this.data.postData.music.coverImg
+
+backAudioManager.pause()
+
+backAudioManager.stop()
+```
+
