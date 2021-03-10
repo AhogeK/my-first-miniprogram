@@ -48,6 +48,15 @@ Page({
       backAudioManager,
       isPlaying: app.gMusicPlaying
     })
+    if (app.gMusicId == this.data._pid) {
+      this.setData({
+        isPlaying: true
+      })
+    } else {
+      this.setData({
+        isPlaying: false
+      })
+    }
   },
 
   onCollect(event) {
@@ -99,13 +108,12 @@ Page({
           isPlaying: true
         })
         app.gMusicPlaying = true
+        app.gMusicId = this.data.postData.postId
       })
       this.data.backAudioManager.onPause(() => {
         console.log('on pause')
-        this.setData({
-          isPlaying: false
-        })
         app.gMusicPlaying = false
+        app.gMusicId = null
       })
     } else {
       this.data.backAudioManager.pause()

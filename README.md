@@ -174,6 +174,36 @@ key ``"window"`` value 为一个对象，当中有 ``"navigationBarBackgroundCol
 
 之后就可以在``.wxml``中使用``l-avatar``组件
 
+### 小程序扩展能力
+
+#### 导航组件 ``Tabbar``
+
+可以在 ``app.json``中进行简单配置使用
+
+```json
+"tabBar": {
+    "selectedColor": "#333333",
+    "color": "#999999",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/posts/posts",
+      "text": "文章",
+      "iconPath": "/img/tab/v3-2020-images-tab-post.png",
+      "selectedIconPath": "/img/tab/v3-2020-images-tab-post@highlight.png"
+    }, {
+      "pagePath": "pages/movies/movies",
+      "text": "电影",
+      "iconPath": "/img/tab/v3-2020-images-tab-movie.png",
+      "selectedIconPath": "/img/tab/v3-2020-images-tab-movie@highlight.png"
+    }]
+  },
+  "usingComponents": {}
+```
+
+**tab 页的 json 里需声明 ``usingComponents``项**
+
+![](https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/Screenshot%20from%202021-03-10%2014-04-00.png)
+
 ## 生疏CSS简单了解
 ### letter-spacing
 > 用来增加或者减少字符间的空白间距
