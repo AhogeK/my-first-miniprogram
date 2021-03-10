@@ -13,7 +13,10 @@ Page({
     // wx.navigateTo({
     //   url: '/pages/posts/posts'
     // })
-    wx.redirectTo({
+    // wx.redirectTo({
+    //   url: '/pages/posts/posts'
+    // })
+    wx.switchTab({
       url: '/pages/posts/posts'
     })
   },

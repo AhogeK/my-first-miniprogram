@@ -204,6 +204,8 @@ key ``"window"`` value 为一个对象，当中有 ``"navigationBarBackgroundCol
 
 ![](https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/Screenshot%20from%202021-03-10%2014-04-00.png)
 
+**注意，如果其他页面需要跳转到tab页，必须使用 ``switchTab``进行跳转**
+
 ## 生疏CSS简单了解
 ### letter-spacing
 > 用来增加或者减少字符间的空白间距
