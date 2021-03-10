@@ -1,7 +1,7 @@
 // pages/post-detail/post-detail.js
 import { postList } from '../../data/data'
 
-// const app = getApp()
+const app = getApp()
 // console.log(app)
 // console.log(app.test)
 
@@ -45,7 +45,8 @@ Page({
     }, 50)
     const backAudioManager = wx.getBackgroundAudioManager()
     this.setData({
-      backAudioManager
+      backAudioManager,
+      isPlaying: app.gMusicPlaying
     })
   },
 
@@ -97,15 +98,20 @@ Page({
         this.setData({
           isPlaying: true
         })
+        app.gMusicPlaying = true
       })
       this.data.backAudioManager.onPause(() => {
         console.log('on pause')
         this.setData({
           isPlaying: false
         })
+        app.gMusicPlaying = false
       })
     } else {
       this.data.backAudioManager.pause()
+      this.setData({
+        isPlaying: false
+      })
     }
   },
 
@@ -134,7 +140,7 @@ Page({
    */
   onUnload: function () {
     console.log("on unload")
-    this.data.backAudioManager.stop()
+    // this.data.backAudioManager.stop()
   },
 
   /**

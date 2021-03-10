@@ -2,5 +2,5 @@ App({
   onLaunch: function () {
     console.log('小程序启动')
   },
-  test: 1
+  gMusicPlaying: false
 })
