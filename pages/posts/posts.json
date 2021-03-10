@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "l-icon": "/miniprogram_npm/lin-ui/icon/index"
+    "post": "/components/posts/index"
   },
   "navigationBarBackgroundColor": "#c22a1e",
   "navigationBarTitleText":"文与字"

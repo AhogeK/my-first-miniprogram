@@ -1,0 +1,17 @@
+<view data-post-id="{{ postData.postId }}" bind:tap="onJumpToDetail" class="post-container">
+  <view class="post-author-date">
+    <image class="post-author" src="{{ postData.avatar }}" />
+    <text class="post-date">{{ postData.date }}</text>
+  </view>
+  <text class="post-title">{{ postData.title }}</text>
+  <image mode="aspectFill" class="post-image" src="{{ postData.imgSrc }}" />
+  <text class="post-content">{{ postData.content }}</text>
+  <view class="post-like">
+    <!-- <image class="post-like-image" src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-icon-chat.png" /> -->
+    <l-icon class="post-like-image" color="#666" size="28" name="favor" />
+    <text class="post-like-font">{{ postData.collection }}</text>
+    <!-- <image class="post-like-image" src="https://ahogek-oss.oss-cn-hangzhou.aliyuncs.com/blog-img/v3-2020-images-icon-view.png" /> -->
+    <l-icon class="post-like-image" color="#666" size="32" name="eye" />
+    <text class="post-like-font">{{ postData.reading }}</text>
+  </view>
+</view>
