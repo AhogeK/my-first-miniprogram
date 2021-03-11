@@ -26,7 +26,7 @@ Page({
       searchResult: true
     })
     wx.request({
-      url: app.gBaseUrl + "in_theaters",
+      url: app.gBaseUrl + "search",
       data: {
         q: event.detail.value
       },
