@@ -206,6 +206,21 @@ key ``"window"`` value 为一个对象，当中有 ``"navigationBarBackgroundCol
 
 **注意，如果其他页面需要跳转到tab页，必须使用 ``switchTab``进行跳转**
 
+#### 开启下拉刷新
+
+##### ``enablePullDownRefresh``
+
+```json
+{
+  "usingComponents": {
+    "movie": "/components/movie/index"
+  },
+  "enablePullDownRefresh": true
+}
+```
+
+[文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/page.html#%E9%85%8D%E7%BD%AE%E9%A1%B9)
+
 ## 生疏CSS简单了解
 ### letter-spacing
 > 用来增加或者减少字符间的空白间距
@@ -372,3 +387,24 @@ backAudioManager.pause()
 backAudioManager.stop()
 ```
 
+### 停止当前页面下拉刷新
+
+#### wx.stopPullDownRefresh(Object object)
+
+```js
+Page({
+  onPullDownRefresh () {
+    wx.stopPullDownRefresh()
+  }
+})
+```
+
+[官方文档](https://developers.weixin.qq.com/miniprogram/dev/api/ui/pull-down-refresh/wx.stopPullDownRefresh.html)
+
+### 显示导航条加载动画
+
+#### wx.showNavigationBarLoading()
+
+同时关闭是**``wx.hideNavigationBarLoading()``**
+
+[文档](https://developers.weixin.qq.com/miniprogram/dev/api/ui/navigation-bar/wx.showNavigationBarLoading.html)
