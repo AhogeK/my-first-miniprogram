@@ -127,6 +127,10 @@ Page({
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
+    let title = this.data.postData.title
+    wx.setNavigationBarTitle({
+      title
+    })
   },
 
   /**
