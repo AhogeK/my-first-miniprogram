@@ -1,18 +1,92 @@
 // pages/movies/movies.js
+
+const app = getApp()
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
+    searchResult: false,
+    searchData: [],
+    inTheaters: [],
+    comingSoon: [],
+    top250: []
+  },
 
+  onSearchCancel(event) {
+    this.setData ({
+      searchResult: false
+    })
+  },
+
+  onConfirm(event) {
+    this.setData({
+      searchResult: true
+    })
+    wx.request({
+      url: app.gBaseUrl + "in_theaters",
+      data: {
+        q: event.detail.value
+      },
+      success:(res) => {
+        this.setData({
+          searchData: res.data.subjects
+        })
+      }
+    })
+  },
+
+  onGotoMore(event) {
+    console.log(event)
+    wx.navigateTo({
+      url: '/pages/more-movie/more-movie?type=' + event.currentTarget.dataset.type
+    })
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    wx.request({
+      url: app.gBaseUrl + 'in_theaters',
+      data: {
+        start: 0,
+        count: 3
+      },
+      success: (res) => {
+        this.setData({
+          inTheaters: res.data.subjects
+        })
+      }
+    })
 
+    wx.request({
+      url: app.gBaseUrl + 'coming_soon',
+      data: {
+        start: 0,
+        count: 3
+      },
+      success: (res) => {
+        this.setData({
+          comingSoon: res.data.subjects
+        })
+      }
+    })
+
+    wx.request({
+      url: app.gBaseUrl + 'top250',
+      data: {
+        start: 0,
+        count: 3
+      },
+      success: (res) => {
+        this.setData({
+          top250: res.data.subjects
+        })
+      }
+    })
   },
 
   /**
